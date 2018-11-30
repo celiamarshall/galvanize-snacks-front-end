@@ -5,9 +5,9 @@ const snack = require('./snack')
 
 const pages = {
   '/': signup.init,
-  '/snacks/login': login.init,
-  '/snacks/home': home.init,
-  'snacks/snack': snack.init
+  '/snacks/login.html': login.init,
+  '/snacks/home.html': home.init,
+  '/snacks/snack.html': snack.init
 }
 
 const path = window.location.pathname

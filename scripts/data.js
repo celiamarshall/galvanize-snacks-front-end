@@ -1,5 +1,5 @@
 const axios = require('axios')
-const BASE_URL = 'localhost:3000/api/'
+const BASE_URL = 'http://localhost:3000/api/'
 
 function getHeaders() {
   const token = localStorage.getItem('token')
@@ -11,18 +11,18 @@ function getHeaders() {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'Authorization': tokenWithScheme
+        'authorization': tokenWithScheme
       }
     }
   }
 }
 
-function signup() {
-  return axios.post(BASE_URL + 'users')
+function signup(userInfo) {
+  return axios.post(BASE_URL + 'users', userInfo)
 }
 
-function login() {
-  return axios.post(BASE_URL + 'login')
+function login(userLogin) {
+  return axios.post(BASE_URL + 'login', userLogin)
 }
 
 function getSnacks() {

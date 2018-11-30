@@ -1,20 +1,43 @@
 body {
+  font-family: "black han sans";
+  background-color: lightgray;
+
+}
+
+.pic-background {
   background-image: url('./images/snacks.jpg');
   height: 100%;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-
-  font-family: "black han sans";
 }
 
 h1 {
-  color:#e0f9f3;
   padding: 30px;
+}
+
+.landing {
+  color:#e0f9f3;
 }
 
 form {
   background-color: lightgray;
   padding: 20px;
   opacity: 0.95;
+}
+
+.gray {
+  background-color: lightgray;
+}
+
+.snack-img {
+  max-height: 300px;
+  margin-bottom: 20px;
+}
+
+hr {
+  height: 5px;
+  background-color: black;
+  margin-bottom: 50px;
+
 }
