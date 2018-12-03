@@ -1,6 +1,6 @@
 function snackOnHomePage({ id, img, name }) {
   return (
-  `<div class="card m-3 border" style="max-width: 25%;">
+    `<div class="card m-3 border" style="max-width: 25%;">
     <a href="./snack.html?id=${id}">
       <img class="card-img-top" src="${img}" alt="${name}" style="width: 100%">
     </a
@@ -24,7 +24,7 @@ function showSnack({ name, img, price, description }) {
 
 function showReview({ id, title, rating, text }) {
   return (
-  `<div class="card snack-review-card">
+    `<div class="card snack-review-card">
   <div class="card-header">
     ${title}
   </div>

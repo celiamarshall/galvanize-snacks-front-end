@@ -5,7 +5,6 @@ function init() {
 
   signUpForm.addEventListener('submit', (event) => {
     event.preventDefault()
-    console.log('hi')
 
     const userInfo = {
       first_name: event.target.first_name.value,

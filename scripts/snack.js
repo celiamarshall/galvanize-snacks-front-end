@@ -57,7 +57,6 @@ function init() {
     data.getUserId()
       .then(response => {
         const userId = response.data.id
-        console.log('hi')
         if (users.includes(userId)) {
           $('#myModal').modal('hide')
           throw { message: 'You have already reviewed this snack' }
@@ -186,8 +185,5 @@ function addEditListeners(snackId) {
     })
   }
 }
-
-
-
 
 module.exports = { init }
