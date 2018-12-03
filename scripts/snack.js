@@ -87,12 +87,12 @@ function init() {
       })
       .then(() => {
         $('#myModal').modal('hide')
+        location.reload()
       })
       .catch(error => {
         errorMessage.classList.remove('hidden')
         errorMessage.innerHTML = error.message
       })
-    location.reload()
   })
 }
 

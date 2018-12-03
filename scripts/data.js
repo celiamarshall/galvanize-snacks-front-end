@@ -1,5 +1,5 @@
 const axios = require('axios')
-const BASE_URL = 'https://mysterious-ridge-20284.herokuapp.com/api/'
+const BASE_URL = 'http://localhost:3000/api/'
 
 function getHeaders() {
   const token = localStorage.getItem('token')
