@@ -10,6 +10,10 @@ function init() {
 
     document.querySelector('.snacks').innerHTML = snackHTML.join('')
   })
+
+  document.querySelector('.logout').addEventListener('click', (event) => {
+    localStorage.removeItem('token')
+  })
 }
 
 

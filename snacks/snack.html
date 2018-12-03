@@ -28,20 +28,28 @@
         <a class="nav-link disabled" href="./home.html">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Logout</a>
+        <a class="nav-link disabled logout" href="./login.html">Logout</a>
       </li>
     </ul>
 
     <h1 class="text-center">Galvanize Snack Reviews</h1>
     <hr>
 
-    <div class="row justify-content-center">
-      <div class="one-snack"></div>
+    <div class="row align-items-start">
+      <div class="col-5 offset-2">
+        <div class="one-snack"></div>
+      </div>
+      <div class="col-4">
+        <div class="reviews"></div>
+        
+        <button class="btn btn-secondary review-snack" data-toggle="modal" data-target="#myModal">Review Snack</button>
+
+        <p class="hidden error" style="color: red"></p>
+
+      </div>
     </div>
-    <button class="btn btn-secondary offset-2" data-toggle="modal" data-target="#myModal">Review Snack</button>
 
 
-    <div class="reviews row offset-2"></div>
 
     <div class="modal" id="myModal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
@@ -53,7 +61,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <form class="new-review">
               <div class="form-group">
                 <label for="title">Title</label>
                 <input type="text" class="form-control" id="title" required>
@@ -74,13 +82,52 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary new-review">Submit Review</button>
+                <button type="submit" class="btn btn-primary">Submit Review</button>
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="modal" id="editModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Edit Review</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form class="edit-review">
+                <div class="form-group">
+                  <label for="editTitle">Title</label>
+                  <input type="text" class="form-control" id="editTitle" required>
+                </div>
+                <div class="form-group">
+                  <label for="editRating">Rating</label>
+                  <select class="form-control" id="editRating" required>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="editText">Review</label>
+                  <textarea class="form-control" id="editText" rows="3" required></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Update Review</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
   </main>

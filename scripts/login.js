@@ -14,7 +14,6 @@ function init() {
     data.login(userLogin)
     .then ( (response) => {
       localStorage.setItem('token', response.data.token)
-      localStorage.setItem('id', response.data.id)
       window.location = '/snacks/home.html'
     })
     .catch( error => {

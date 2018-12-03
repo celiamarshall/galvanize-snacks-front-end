@@ -20,6 +20,11 @@ h1 {
   color:#e0f9f3;
 }
 
+.login-link {
+  padding: 20px;
+  color: darkblue;
+}
+
 form {
   background-color: lightgray;
   padding: 20px;
@@ -39,5 +44,12 @@ hr {
   height: 5px;
   background-color: black;
   margin-bottom: 50px;
+}
 
+.snack-review-card {
+  margin-bottom: 30px;
+}
+
+.hidden {
+  display: none
 }

@@ -25,6 +25,10 @@ function login(userLogin) {
   return axios.post(BASE_URL + 'login', userLogin)
 }
 
+function getUserId() {
+  return axios.get(BASE_URL + 'login', getHeaders())
+}
+
 function getSnacks() {
   return axios.get(BASE_URL + 'snacks', getHeaders())
 }
@@ -56,6 +60,7 @@ function deleteReview(snackId, reviewId) {
 module.exports = {
   signup,
   login,
+  getUserId,
   getSnacks,
   getOneSnack,
   getReviews,
